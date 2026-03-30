@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Survey Form</title>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Survey Form</h2>
+        <p>Please share your feedback about this ITIS 3135 site.</p>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <p>
+                    <label for="full-name">Full Name *</label><br>
+                    <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address *</label><br>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                </p>
+
+                <p>
+                    <label for="student-level">Student Level</label><br>
+                    <select id="student-level" name="studentLevel">
+                        <option value="">Select one</option>
+                        <option value="freshman">Freshman</option>
+                        <option value="sophomore">Sophomore</option>
+                        <option value="junior">Junior</option>
+                        <option value="senior">Senior</option>
+                        <option value="graduate">Graduate</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Site Experience</legend>
+
+                <p>
+                    <label for="visit-frequency">How often do you visit this course site?</label><br>
+                    <select id="visit-frequency" name="visitFrequency">
+                        <option value="">Select one</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="first-time">This is my first time</option>
+                    </select>
+                </p>
+
+                <p>How easy is it to navigate this website? *</p>
+                <p>
+                    <label><input type="radio" name="easeOfUse" value="very-easy" required> Very easy</label><br>
+                    <label><input type="radio" name="easeOfUse" value="easy"> Easy</label><br>
+                    <label><input type="radio" name="easeOfUse" value="neutral"> Neutral</label><br>
+                    <label><input type="radio" name="easeOfUse" value="difficult"> Difficult</label><br>
+                    <label><input type="radio" name="easeOfUse" value="very-difficult"> Very difficult</label>
+                </p>
+
+                <p>Which pages do you use most? (Select all that apply)</p>
+                <p>
+                    <label><input type="checkbox" name="usedPages" value="home"> Home</label><br>
+                    <label><input type="checkbox" name="usedPages" value="contract"> Contract</label><br>
+                    <label><input type="checkbox" name="usedPages" value="cards"> Cards</label><br>
+                    <label><input type="checkbox" name="usedPages" value="documentation"> Documentation</label><br>
+                    <label><input type="checkbox" name="usedPages" value="intro-form"> Intro Form</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feedback</legend>
+
+                <p>
+                    <label for="favorite-part">What is your favorite part of this website?</label><br>
+                    <textarea id="favorite-part" name="favoritePart" rows="3" placeholder="Tell us what you like most."></textarea>
+                </p>
+
+                <p>
+                    <label for="improvement">What should be improved?</label><br>
+                    <textarea id="improvement" name="improvement" rows="3" placeholder="Share suggestions for improvement."></textarea>
+                </p>
+
+                <p>
+                    <label for="recommend-score">How likely are you to recommend this site to classmates? (0-10)</label><br>
+                    <input type="number" id="recommend-score" name="recommendScore" min="0" max="10" step="1" value="8">
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Survey</button>
+                <button type="reset">Reset Form</button>
+            </p>
+        </form>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="Scripts/htmlinclude.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+Summary:
+
+In this assignment, we are going to create a form that will allow visitors to create their own Introduction Website. In a form like page, you are going to request information like personal background, academic background, and much more! From there, your website visitor should be able to add all of their information, click a submit button, and their own introduction page will pop up. Refer back to your introduction page while you test this.
+
+Evaluations:
+
+To test this we will first follow your link, and click the submit button. We will open your existing introduction page in another tab, and compare these two pages. They should be EXACTLY the same except for the H2 (Which should say Introduction Form). This includes spacing, colors, fonts, etc. We should not be able to distinguish the your form result page from your original introduction apart from the additional word in the H2.
+
+Next, we will go in and edit the prefilled values to make sure that the new values show up on the submit page, including a different image. Then we will clear the form and test that. Then test that optional fields can be blank and that the rest are required.
+
+We will try adding and removing courses to the form, and making sure these process as expected.
+
+Instructions:
+
+Setup:
+
+Similar to previous submissions, start by creating a new file in your itis3135 folder intro_form.html
+Add this page to the nav bar found in your header. At this point you should be implementing JS to load your header/footer so this should only be added in one place
+Change the title, and h2 tag accordingly (so the title and h2 of the page say Introduction Form)
+Design the Form:
+
+Add an h3 tag that says something like
+Please submit the form below.
+Add a <form> element.
+In this form element, you need to ask the user for all the fields from the introduction assignment.
+First Name
+Middle Name (or Initial) (optional)
+Nickname/Preferred Name (optional)
+Last Name
+Acknowledgment Statement
+Acknowledgement Date
+Mascot Adjective
+Mascot Animal
+Divider (ie, ~, |, ♥️, etc)
+Picture (Needs to default to your image, but the user to upload their own image)
+Picture Caption
+Personal Statement
+7 Main Bullets (Personal Background, etc)
+Course and sub-bullets, with fields for each of: department, number, name, reason.
+Quote
+Quote author
+Funny thing (optional)
+Something I would like to share (optional)
+5 links (LinkedIn, etc)
+Prefill info w/ YOUR information using the value attribute, on each field with the value on your introduction. 
+Add appropriate placeholders on each input that display when the form is empty. (When you clear the form)
+Add Control Buttons:
+
+Insert a 'Submit' button: <button type="submit">Submit</Button>.
+Add a 'Reset' button: <button type="reset">Reset</Button>.
+Add a 'Clear' button: <button type="button">Clear</button>, To clear all the fields. You can implement this in many ways, but here are two examples.
+
+document
+  .querySelector("button[type='button']")
+  .addEventListener("click", function (event) {
+    Array.from(document.querySelectorAll("form input")).forEach((input) => {
+      input.value = "";
+    });
+  });
+
+const clearButton = document.querySelector("button[type='button']");
+const inputElements = Array.from(document.querySelectorAll("form input"));
+clearButton.addEventListener("click", function () {
+  inputs.forEach((input) => (input.value = ""));
+});
+
+          
+JavaScript Functionality:
+
+Create a JavaScript file named introduction.js, make sure to add this in your Scripts folder
+Add a JavaScript function that prevents the form from submitting w/o the required information. 
+Add a JavaScript function that will reset the progress of the form
+Add an eventListener to the form element that prevents default functionality.
+
+  const formElement = document.getElementById("form");
+  formElement.addEventListener("submit", (e) => e.preventDefault()); // prevents page refresh / default behavior
+              
+Add a JavaScript function that will add new course text boxes
+Add a JavaScript function that will add a delete button beside each new course text box
+When the user clicks 'Submit', use JavaScript to gather the data from the form and add content in place of the form. 
+There should still be a reset link at the bottom of the screen to reset the progress so that your website visitor can do it again.
+Testing:
+
+Fill out the form and click 'Submit'. Ensure that the results display correctly .
+Test the 'Reset' button to make sure it brings you back to your default values.
+Test the 'Clear' button to make sure it empties all fields.
+END Result AND LEARN HOW TO UPLOAD an image too!!
+
+ 
+
+ 
+
+This week we will be doing something similar to last week: Turning the content of the intro form into an HTML section.
+
+Make a new JavaScript file called generate_html.js
+Link this file to your Introduction Form page.
+Edit the newly created file and your existing Introduction Form so it does the following:
+Add a "Generate HTML" button next to your other buttons (To the right of your JSON one)
+When the user clicks it, your script should create HTML text on the page that replaces the form, in the same manner as your earlier introduction did.
+Use something like Highlight.JSLinks to an external site. and section, pre, code elements to display this as nicely formatted and colored code.
+A viewer should be able to highlight everything in this code section to get all the data from your introduction in HTML format.
+Your script should change the H2 from Introduction Form to Introduction HTML.
+Submit your Charlotte URL for this assignment. Example: webpages.charlotte.edu/ninernet/itis3135/intro_form.html
+
+Here is an example of a 2025 TA's HTML Output. Note this displays the actual code on this screen meaning you need to use HTML to render HTML literals.
+
+<h2>Introduction HTML</h2>
+<h3>Alexander J. "Alex" Prechtel ★ Advanced Pegasus</h3>
+<figure>
+    <img
+        src="images/headshot.jpeg"
+        alt="Headshot of Alexander Prechtel at the beach"
+    />
+    <figcaption>At the beach on the eastern coast of Florida (2024)</figcaption>
+</figure>
+<ul>
+    <li>
+        <strong>Personal Background:</strong> Grew up north of Charlotte, and
+        have always had a love of computers.
+    </li>
+
+   and so on...
+ 
+
+Make a new JavaScript file called generate_json.js
+Link this file to your Introduction Form page.
+Edit the newly created file and your existing Introduction Form so it does the following:
+Add a "Generate JSON" button next to your other buttons
+When the user clicks it, your script should create a json text file on the page that replaces the form, in the same manner as your earlier introduction did.
+(Optional) Use something like Highlight.JSLinks to an external site. and section, pre, code elements to display this as nicely formatted and colored code.
+A viewer should be able to highlight everything in this code section to get all the data from your introduction in JSON format.
+Your script should change the H2 from Introduction Form to Introduction HTML.
+Submit your Charlotte URL for this assignment. Example: webpages.charlotte.edu/ninernet/itis3135/intro_form.html
+
+Here is an example of a JSON Output you can follow, feel free to modify and change some of the key/value pairs to match the current introduction requirements
+
+ {
+  "first_name": "Alexander",
+  "preferred_name": "Alex",
+  "middle_initial": "J",
+  "last_name": "Prechtel",
+  "divider": "~",
+  "mascot_adjective": "Advanced",
+  "mascot_animal": "Pegasus",
+  "image": "images/headshot.jpeg",
+  "image_caption": "At the beach on the eastern coast of Florida (2024)",
+  "personal_statement": "...",
+  "personal_background": "Grew up north of Charlotte, and have always had a love of computers.",
+  "professional_background": "This is my first semester as an Instructional Assistant/Teachers Assistant, but before that I was a Peer Tutor for CCI.",
+  "academic_background": "I’m currently a Junior at UNC Charlotte studying computer science with a focus in Cybersecurity. Before that I attended Highschool in Mooresville, North Carolina.",
+  "subject_background": "...",
+  "primary_computer": "The laptop I use for university is a Macbook Pro M2 14 inch. I also use a custom built Windows 11 computer.",
+  "courses": [
+    {
+      "department": "ITIS",
+      "number": "4250",
+      "name": "Computer Forensics",
+      "reason": "Required course for my concentration but the course’s subject also interests me."
+    },
+    {
+      "department": "ITIS",
+      "number": "3246",
+      "name": "IT Infrastructure and Security",
+      "reason": "Another required course for my concentration but this is another class I am interested in."
+    },
+    {
+      "department": "THEA",
+      "number": "1512",
+      "name": "Theatre in the United States",
+      "reason": "I needed to take one more theme course and this one was recommended to me by a friend who took it previously."
+    },
+    {
+      "department": "MATH",
+      "number": "2164",
+      "name": "Matrices & Linear Algebra",
+      "reason": "Required course for the Computer Science degree."
+    },
+    {
+      "department": "BIOL",
+      "number": "1110",
+      "name": "Principles of Biology I",
+      "reason": "I needed to take another science course and this was recommended to me by a friend."
+    },
+    {
+      "department": "BIOL",
+      "number": "1110L",
+      "name": "Principles of Biology I Lab",
+      "reason": "I needed to take a science course with its lab."
+    },
+    {
+      "department": "EXAMPLE",
+      "number": "101",
+      "name": "Example Name",
+      "reason": "Example Reason"
+    }
+  ],
+  "links": [
+    {
+      "name": "GitHub",
+      "href": "..."
+    },
+    {
+      "name": "GitHub Page",
+      "href": "..."
+    },
+    {
+      "name": "freeCodeCamp",
+      "href": "..."
+    },
+    {
+      "name": "Codecademy",
+      "href": "..."
+    },
+    {
+      "name": "LinkedIn",
+      "href": "..."
+    }
+  ]
+}   

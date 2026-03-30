@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>The Beautiful Game - Soccer Passion</title>
+    <style>
+        /* ===== CRAP Principles: Contrast, Repetition, Alignment, Proximity ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%);
+            color: #92400e;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(to right, #f59e0b, #d97706, #f59e0b);
+            padding: 2rem;
+            border-bottom: 4px solid #92400e;
+            box-shadow: 0 4px 8px rgba(146, 64, 14, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+                h1 {
+            font-size: 3rem;
+        }
+
+        .main-header {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        nav button {
+            background-color: #92400e;
+            color: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 0.8rem 1.2rem;
+            margin: 0.3rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #f59e0f;
+            color: #92400e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        }
+
+        nav button.active {
+            background-color: #f9d290;
+            color: #502307;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+        }
+
+        nav .divider {
+            color: #f9d290;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin: 0 0.3rem;
+            line-height: 1.3;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            display: none;
+            background: rgba(254, 243, 199, 0.95);
+            border: 3px solid #f59e0b;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(146, 64, 14, 0.2);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #92400e;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #f59e0b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* gold-accented subsection headings */
+        .gold-heading {
+            color: #ff2600;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #78350f;
+        }
+
+        .content-block {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(253, 230, 138, 0.8);
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+        }
+
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(254, 243, 199, 0.9);
+            border-radius: 10px;
+            border: 2px solid #f59e0b;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #f59e0b;
+            box-shadow: 0 4px 12px rgba(146, 64, 14, 0.3);
+        }
+
+        figcaption {
+            color: #92400e;
+            font-weight: 600;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .ai-prompt {
+            font-style: italic;
+            color: #b45309;
+            margin-top: 0.8rem;
+            padding: 0.8rem;
+            background: rgba(253, 230, 138, 0.6);
+            border-radius: 5px;
+            border-left: 3px solid #b45309;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: rgba(254, 243, 199, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th {
+            background-color: #fae2b7;
+            color: #6f300c;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #f5ce7f;
+            color: #6f300c;
+        }
+
+        table tr:hover {
+            background-color: rgba(245, 158, 11, 0.1);
+        }
+
+        form {
+            background: rgba(254, 243, 199, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        fieldset {
+            border: 2px solid #f59e0b;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+        }
+
+        legend {
+            color: #92400e;
+            font-weight: 600;
+            padding: 0 0.5rem;
+        }
+
+        label {
+            display: block;
+            margin: 1rem 0 0.3rem 0;
+            color: #92400e;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            background-color: #fef3c7;
+            color: #92400e;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            background-color: #fde68a;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+        }
+
+        button[type="submit"] {
+            background-color: #f59e0b;
+            color: #92400e;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            width: auto;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(245, 158, 11, 0.5);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(to right, #f59e0b, #d97706, #f59e0b);
+            padding: 2rem;
+            text-align: center;
+            border-top: 4px solid #92400e;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 8px rgba(146, 64, 14, 0.3);
+        }
+
+        footer p {
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        footer a {
+            color: #fef3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fde68a;
+            text-decoration: underline;
+        }
+
+        .validation-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .validation-icons a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .validation-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .validation-icons img {
+            height: 31px;
+            width: auto;
+            border-radius: 5px;
+            background: #fef3c7;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+            @media (max-width: 768px) {
+    
+
+            nav button {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        
+            nav .divider {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th, table td {
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Beautiful Game</h1>
+        <nav>
+            <button class="nav-btn active" data-section="what">What</button>
+            <span class="divider">⚽</span>
+            <button class="nav-btn" data-section="who">Who</button>
+            <span class="divider">⚽</span>
+            <button class="nav-btn" data-section="when">When</button>
+            <span class="divider">⚽</span>
+            <button class="nav-btn" data-section="where">Where</button>
+            <span class="divider">⚽</span>
+            <button class="nav-btn" data-section="how">How</button>
+            <span class="divider">⚽</span>
+            <button class="nav-btn" data-section="why">Why</button>
+            <span class="divider">⚽</span>
+            <button class="nav-btn" data-section="ai-prompts">AI Prompts</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- WHAT Section (Home) -->
+        <section id="what" class="active">
+            <h2>What is Soccer?</h2>
+            
+            <div class="content-block">
+                <p>Soccer, known as football outside North America, is the world's most beloved sport. It is a dynamic team sport where two teams of eleven players each compete to move a ball into the opposing team's goal. The sport emphasizes skill, strategy, teamwork, and physical fitness. Whether played casually in local parks or professionally in world-class stadiums, soccer transcends cultures, languages, and borders.</p>
+            </div>
+
+            <figure>
+                <img src="../images/myphotos/Club-Olympic-of-Bamako.JPG"
+                    alt="My team picture of Bamako soccer match">
+                <figcaption>
+                    <em>Personal photo captured during a Club Olympic of Bamako soccer match, showing the excitement of local play.</em>
+                </figcaption>
+            </figure>
+
+            <div class="content-block">
+                <h3 class="gold-heading">Core Fundamentals</h3>
+                <p>The game consists of two 45-minute halves, scored by kicking the ball into the opposing goal. Players use their feet primarily, but can also use their head or body (except arms and hands, except for the goalkeeper). The simplicity of the rules combined with the complexity of play makes soccer accessible to everyone yet challenging to master. From youth leagues to professional clubs like Barcelona, Manchester United, and Real Madrid, soccer captivates billions of fans worldwide.</p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Role</th>
+                        <th>Key Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Goalkeeper</td>
+                        <td>Defends the goal</td>
+                        <td>Reflexes, Decision-making, Distribution</td>
+                    </tr>
+                    <tr>
+                        <td>Defender</td>
+                        <td>Protects the back line</td>
+                        <td>Positioning, Tackling, Heading</td>
+                    </tr>
+                    <tr>
+                        <td>Midfielder</td>
+                        <td>Connects defense and attack</td>
+                        <td>Passing, Vision, Stamina, Control</td>
+                    </tr>
+                    <tr>
+                        <td>Forward</td>
+                        <td>Scores goals</td>
+                        <td>Shooting, Dribbling, Agility, Timing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- WHO Section -->
+        <section id="who">
+            <h2>Who Plays Soccer?</h2>
+            
+            <div class="content-block">
+                <p>Soccer is a global sport played by people of all ages, genders, and backgrounds. From young children just learning the game to professional athletes earning millions, soccer welcomes everyone. The sport's inclusivity is one of its greatest strengths—it requires minimal equipment and can be played almost anywhere, making it truly democratic. Whether you're a casual enthusiast playing with friends or a dedicated professional training daily, soccer has a place for you.</p>
+            </div>
+
+            <figure>
+                <img src="../images/myphotos/my%20son.jpg" alt="My son playing soccer" width="600" height="400">
+                <figcaption>My Son Playing Soccer
+                    <p class="ai-prompt"><em>Personal photo: Showing my son's passion for the game and the joy he gets from playing</em></p>
+                </figcaption>
+            </figure>
+
+            <form>
+                <fieldset>
+                    <legend>Player Profile Survey</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="age">Age Group:</label>
+                    <select id="age" name="age" required>
+                        <option value="">-- Select Age Group --</option>
+                        <option value="youth">Youth (Under 12)</option>
+                        <option value="teen">Teen (12-18)</option>
+                        <option value="adult">Adult (18-35)</option>
+                        <option value="master">Master (35+)</option>
+                    </select>
+                    
+                    <label for="position">Preferred Position:</label>
+                    <select id="position" name="position">
+                        <option value="">-- Select Position --</option>
+                        <option value="goalkeeper">Goalkeeper</option>
+                        <option value="defender">Defender</option>
+                        <option value="midfielder">Midfielder</option>
+                        <option value="forward">Forward</option>
+                    </select>
+                    
+                    <label for="experience">Years of Experience:</label>
+                    <input type="number" id="experience" name="experience" min="0" max="50" placeholder="0">
+                    
+                    <button type="submit">Submit Your Profile</button>
+                </fieldset>
+            </form>
+
+            <div class="content-block">
+                <h3 class="gold-heading">Famous Players</h3>
+                <p>Legendary players like Pelé, Diego Maradona, Zinedine Zidane, and Ronaldinho have shaped the sport's history. Contemporary superstars including Cristiano Ronaldo, Lionel Messi, Kylian Mbappé, and Alexia Putellas continue to inspire millions. These athletes demonstrate the pinnacle of skill, dedication, and passion. Each generation produces new heroes who leave lasting legacies and inspire the next wave of players to pursue excellence on the pitch.</p>
+            </div>
+        </section>
+
+        <!-- WHEN Section -->
+        <section id="when">
+            <h2>When Can You Play Soccer?</h2>
+            
+            <div class="content-block">
+                <p>Soccer is a year-round sport with opportunities to play in virtually any season. Professional leagues operate on different schedules worldwide, with European clubs playing from August to May, while other regions have different calendars. The sport adapts to climate conditions—beach soccer thrives in summer, while indoor soccer provides opportunities during harsh winters. Youth tournaments span the entire calendar, and recreational leagues operate continuously. The beauty of soccer is that there's always a season, somewhere, for someone to play.</p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Season</th>
+                        <th>Best For</th>
+                        <th>Notable Leagues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>August - May</td>
+                        <td>Professional club play</td>
+                        <td>Premier League, La Liga, Serie A, Bundesliga</td>
+                    </tr>
+                    <tr>
+                        <td>June - July</td>
+                        <td>International tournaments</td>
+                        <td>UEFA Euro, Copa América, African Cup of Nations</td>
+                    </tr>
+                    <tr>
+                        <td>November - December</td>
+                        <td>World Cup Finals</td>
+                        <td>FIFA World Cup (every 4 years)</td>
+                    </tr>
+                    <tr>
+                        <td>Year-Round</td>
+                        <td>Youth and recreational</td>
+                        <td>Local clubs, amateur leagues, casual pickup games</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="../images/myphotos/IMG-20190616-WA0032.JPG" alt="Before the game preparation" width="600" height="400">
+                <figcaption>Pre-Game Focus and Preparation
+                    <p class="ai-prompt"><em>Personal photo: Getting ready before the match, showing the dedication and mental preparation that goes into soccer</em></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- WHERE Section -->
+        <section id="where">
+            <h2>Where is Soccer Played?</h2>
+            
+            <div class="content-block">
+                <p>Soccer is played everywhere—from the grandest stadiums holding 100,000+ spectators to dusty fields in remote villages. The sport's accessibility means it requires only a flat surface and goals (or markers). Professional teams play in state-of-the-art facilities with natural and artificial surfaces. Neighborhood parks host countless youth and recreational leagues. Beaches, gymnasiums, and rooftops all become soccer venues. The FIFA World Cup brings together nations, while local clubs create communities. Whether it's Old Trafford, Camp Nou, or a field by your home, soccer transforms spaces into theaters of dreams.</p>
+            </div>
+
+            <figure>
+                <img src="../images/myphotos/Bank%20of%20America%20Stadium.jpeg" alt="Bank of America Stadium" width="600" height="400">
+                <figcaption>Bank of America Stadium - Home of Charlotte FC
+                    <p class="ai-prompt"><em>Personal photo: The magnificent Bank of America Stadium, showcasing the world-class facilities where professional soccer is played</em></p>
+                </figcaption>
+            </figure>
+
+            <div class="content-block">
+                <h3 class="gold-heading">Top Locations</h3>
+                <p>Europe dominates professional soccer with legendary stadiums like Old Trafford (Manchester), Camp Nou (Barcelona), and Allianz Arena (Munich). South America has produced incredible talent and hosted passionate matches in Buenos Aires and Rio de Janeiro. African nations like Egypt and Nigeria push the sport's boundaries. Asia is rapidly growing with China and Japan investing heavily. North American soccer is experiencing unprecedented growth. Every continent celebrates soccer as part of its culture and identity, each bringing unique playing styles and passionate fan bases.</p>
+            </div>
+
+            <form>
+                <fieldset>
+                    <legend>Find Your Local Soccer Facility</legend>
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" placeholder="Enter your country" required>
+                    
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city">
+                    
+                    <label for="facility-type">Facility Type:</label>
+                    <select id="facility-type" name="facility-type">
+                        <option value="">-- Select Type --</option>
+                        <option value="outdoor">Outdoor Field</option>
+                        <option value="indoor">Indoor Arena</option>
+                        <option value="professional">Professional Stadium</option>
+                        <option value="beach">Beach Soccer</option>
+                    </select>
+                    
+                    <button type="submit">Find Facilities</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- HOW Section -->
+        <section id="how">
+            <h2>How Do You Play Soccer?</h2>
+            
+            <div class="content-block">
+                <p>Playing soccer involves understanding basic rules and developing fundamental skills. The game starts with a kickoff from the center, with players passing, dribbling, and shooting to move the ball toward the opponent's goal. The goalkeeper is the only player allowing hand contact with the ball within their penalty area. Fouls result in free kicks or penalty kicks. The team with the most goals after 90 minutes wins. Beyond rules, success requires effort in training—developing ball control, first touch, passing accuracy, positioning awareness, and team chemistry through dedicated practice and match experience.</p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Description</th>
+                        <th>Training Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Passing</td>
+                        <td>Accurately sending the ball to teammates</td>
+                        <td>Foot placement, power control, vision</td>
+                    </tr>
+                    <tr>
+                        <td>Dribbling</td>
+                        <td>Running with the ball under control</td>
+                        <td>Close control, change of direction, speed</td>
+                    </tr>
+                    <tr>
+                        <td>Shooting</td>
+                        <td>Striking the ball toward goal</td>
+                        <td>Follow-through, accuracy, power, timing</td>
+                    </tr>
+                    <tr>
+                        <td>Heading</td>
+                        <td>Making contact with the ball using the head</td>
+                        <td>Timing, positioning, neck strength</td>
+                    </tr>
+                    <tr>
+                        <td>Tackling</td>
+                        <td>Winning the ball from opponents</td>
+                        <td>Timing, body positioning, control</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="../images/myphotos/world-best-players.JPG" alt="World's Best Soccer Player" width="600" height="400">
+                <figcaption><em>Messi-Cristiano</em> - One of the World's Best Soccer Players
+                    <p class="ai-prompt"><em>world's class players: One of the greatest soccer players of all time</em></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- WHY Section -->
+        <section id="why">
+            <h2>Why Soccer Matters</h2>
+            
+            <div class="content-block">
+                <p>Soccer transcends sport—it builds character, creates communities, and connects humanity. The sport teaches teamwork, resilience, discipline, and respect. Young players learn life lessons through competition and collaboration. Communities gather around local clubs, creating bonds that strengthen neighborhoods. Internationally, soccer provides peaceful competition between nations, fostering understanding and friendship. The sport breaks down barriers of language, wealth, and culture. Players develop confidence, fitness, and friendship. Fans find belonging in supporter communities. Soccer impacts mental and physical health, creating healthier, happier people. From grassroots participation to World Cup glory, soccer enriches lives in immeasurable ways.</p>
+            </div>
+
+            <figure>
+                <img src="../images/myphotos/Benefit-playing-soccer.png" alt="Trophy celebration" width="600" height="400">
+                <figcaption>It's All Worth It - playing is important for your health and well-being.
+                    <p class="ai-prompt"><em>Personal photo: Celebrating the trophy, capturing the ultimate reward for passion, dedication, and teamwork in soccer</em></p>
+                </figcaption>
+            </figure>
+
+            <div class="content-block">
+                <h3 class="gold-heading">The Beautiful Game's Impact</h3>
+                <p>Soccer has lifted people out of poverty, provided education to millions, and created opportunities for upward mobility. Players like Pelé and Ronaldinho became global ambassadors. The sport funds development in emerging nations. FIFA World Cup generates economic stimulus. Children's soccer programs reduce crime and drop-out rates. Women's soccer has grown explosively, providing opportunities previously unavailable. Para-soccer includes athletes with disabilities. The sport adapts to every circumstance, welcoming everyone. From supporting mental health to creating economic hope, soccer proves its worth extends far beyond the 90 minutes of play on the pitch.</p>
+            </div>
+        </section>
+
+        <!-- AI PROMPTS Section -->
+        <section id="ai-prompts">
+            <h2>AI Prompts &amp; Image Generation</h2>
+            
+            <div class="content-block">
+                <h3 class="gold-heading">AI Model Used</h3>
+                <p><strong>Model:</strong> Claude 3 (or equivalent AI image generator like DALL-E, Midjourney, or Stable Diffusion)</p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="gold-heading">All Prompts Used</h3>
+                <p><strong>5. Why Section - Goal Celebration:</strong><br>
+            </div>
+
+            <div class="content-block">
+                <h3 class="gold-heading">HTML &amp; CSS Generation</h3>
+                <p><strong>Model:</strong> Claude 3.5 Haiku</p>
+                <p><strong>Prompt Used:</strong><br>
+                "Create a professional single-page soccer hobby website with embedded CSS. Include sections for What, Who, When, Where, How, Why, and AI Prompts. Implement navigation that shows/hides sections using JavaScript. Use a green and gold color scheme (not default colors). Include a header with h1, navigation with unique sphere dividers, main content with at least 3 items per section including figures with captions, and footer with validation links. Follow CRAP design principles. Make it mobile responsive. Add proper form inputs and tables for content variety. Ensure all semantic HTML5 elements are used correctly."</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../bathilydesigns.net/index.html">Bathily Designs</a></p>
+        <div class="validation-icons">
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2FUNCCID%2Fitis3135%2Fhobby%2F" target="_blank">
+                <img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0" width="31" height="31">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2FUNCCID%2Fitis3135%2Fhobby%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" width="31" height="31">
+            </a>
+            <a href="https://www.accessibilitychecker.com/" target="_blank">
+                <img src="https://www.w3.org/WAI/test-evaluate/images/wcag-icon.png" alt="Web Content Accessibility Guidelines" width="31" height="31">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+const navButtons = document.querySelectorAll('.nav-btn');
+const sections = document.querySelectorAll('section');
+
+navButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        
+        // Hide all sections
+        sections.forEach((section) => {
+            section.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        navButtons.forEach((btn) => {
+            btn.classList.remove('active');
+        });
+        
+        // Show selected section
+        document.getElementById(sectionId).classList.add('active');
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Scroll to top of page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+    </script>
+</body>
+</html>

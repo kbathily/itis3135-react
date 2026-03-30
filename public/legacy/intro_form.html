@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bathily's Brave Kudu ~ ITIS 3135 | Introduction Form</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div data-include="components/header.html"></div>
+	<main>
+		<h2 id="page-title">Introduction Form</h2>
+		<div id="form-view">
+			<h3>Please submit the form below.</h3>
+			<form id="intro-form">
+				<fieldset>
+					<legend>Name and Mascot</legend>
+					<p>
+						<label for="first-name">First Name</label><br>
+						<input type="text" id="first-name" name="firstName" value="Kalilou" placeholder="Enter your first name" required>
+					</p>
+					<p>
+						<label for="middle-name">Middle Name or Initial</label><br>
+						<input type="text" id="middle-name" name="middleName" value="" placeholder="Enter your middle name or initial">
+					</p>
+					<p>
+						<label for="preferred-name">Nickname or Preferred Name</label><br>
+						<input type="text" id="preferred-name" name="preferredName" value="Bathily" placeholder="Enter your nickname or preferred name">
+					</p>
+					<p>
+						<label for="last-name">Last Name</label><br>
+						<input type="text" id="last-name" name="lastName" value="Bathily" placeholder="Enter your last name" required>
+					</p>
+					<p>
+						<label for="divider">Divider</label><br>
+						<input type="text" id="divider" name="divider" value="|" placeholder="Enter a divider such as ~ or |" required>
+					</p>
+					<p>
+						<label for="mascot-adjective">Mascot Adjective</label><br>
+						<input type="text" id="mascot-adjective" name="mascotAdjective" value="Brave" placeholder="Enter mascot adjective" required>
+					</p>
+					<p>
+						<label for="mascot-animal">Mascot Animal</label><br>
+						<input type="text" id="mascot-animal" name="mascotAnimal" value="Kudu" placeholder="Enter mascot animal" required>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Acknowledgment</legend>
+					<p>
+						<label for="acknowledgment-statement">Acknowledgment Statement</label><br>
+						<textarea id="acknowledgment-statement" name="acknowledgmentStatement" rows="3" placeholder="Enter your acknowledgment statement" required>I understand that what I put here is publicly available on the web and I won’t put anything here I don’t want the public to see - BK</textarea>
+					</p>
+					<p>
+						<label for="acknowledgment-date">Acknowledgment Date</label><br>
+						<input type="text" id="acknowledgment-date" name="acknowledgmentDate" value="01/23/2026" placeholder="MM/DD/YYYY" pattern="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$" title="Enter the date as MM/DD/YYYY" required>
+					</p>
+					<p>
+						<label><input type="checkbox" id="acknowledgment-check" name="acknowledgmentCheck" checked required> I agree with the acknowledgment statement above.</label>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Picture</legend>
+					<p>
+						<label for="picture-path">Default Picture Path</label><br>
+						<input type="text" id="picture-path" name="picturePath" value="images/myphotos/Selfy.jpg" placeholder="Enter image path" required>
+					</p>
+					<p>
+						<label for="picture-upload">Upload a New Picture</label><br>
+						<input type="file" id="picture-upload" name="pictureUpload" accept="image/*">
+					</p>
+					<p>
+						<label for="picture-caption">Picture Caption</label><br>
+						<input type="text" id="picture-caption" name="pictureCaption" value="Enjoying a sunny day at Campus." placeholder="Enter a picture caption" required>
+					</p>
+					<figure>
+						<img id="picture-preview" src="images/myphotos/Selfy.jpg" alt="selfie of Kalilou Bathily">
+						<figcaption id="picture-preview-caption"><i>Enjoying a sunny day at Campus.</i></figcaption>
+					</figure>
+				</fieldset>
+
+				<fieldset>
+					<legend>Personal Information</legend>
+					<p>
+						<label for="personal-statement">Personal Statement</label><br>
+						<textarea id="personal-statement" name="personalStatement" rows="4" placeholder="Enter your personal statement" required>I am passionate about developing reliable, efficient software and continuously improving my technical skills through coursework and practical projects.</textarea>
+					</p>
+					<p>
+						<label for="personal-background">Personal Background</label><br>
+						<textarea id="personal-background" name="personalBackground" rows="4" placeholder="Enter your personal background" required>I am originally from Mali, West Africa which is one of the biggest countries. I am the father of two beautiful boys and I love playing soccer, watching the game, and movies.</textarea>
+					</p>
+					<p>
+						<label for="academic-background">Academic Background</label><br>
+						<textarea id="academic-background" name="academicBackground" rows="4" placeholder="Enter your academic background" required>I’m currently a Junior at UNC Charlotte studying computer science with a focus in Software Engineering. Before that I graduated from Central Piedmont Community College (CPCC) Charlotte, North Carolina.</textarea>
+					</p>
+					<p>
+						<label for="professional-background">Professional Background</label><br>
+						<textarea id="professional-background" name="professionalBackground" rows="4" placeholder="Enter your professional background" required>I am an Uber Driver “The rideshare”. I work for my own convenience in order to pay bills and help my family.</textarea>
+					</p>
+					<p>
+						<label for="primary-computer">Primary Work Computer</label><br>
+						<textarea id="primary-computer" name="primaryComputer" rows="3" placeholder="Enter your primary work computer" required>The laptop I use for university is a Macbook Pro 13 inch when I am home. I also use a Windows 11 computer for much of course work.</textarea>
+					</p>
+					<p>
+						<label for="backup-plan">Backup Work Computer and Location Plan</label><br>
+						<textarea id="backup-plan" name="backupPlan" rows="3" placeholder="Enter your backup plan" required>I will go to the Atkins Library and get a loaner laptop.</textarea>
+					</p>
+					<p>
+						<label for="funny-thing">Funny or Interesting Item to Remember You By</label><br>
+						<input type="text" id="funny-thing" name="funnyThing" value="My accent" placeholder="Enter a funny or interesting item">
+					</p>
+					<p>
+						<label for="share-more">Something I Would Like to Share</label><br>
+						<textarea id="share-more" name="shareMore" rows="3" placeholder="Share something additional">I am open to work with everyone and share my culture with everyone.</textarea>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Courses</legend>
+					<div id="courses-container"></div>
+					<p>
+						<button type="button" id="add-course">Add Course</button>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Quote</legend>
+					<p>
+						<label for="quote-text">Quote</label><br>
+						<textarea id="quote-text" name="quoteText" rows="3" placeholder="Enter your quote" required>I don’t know is half of knowledge.</textarea>
+					</p>
+					<p>
+						<label for="quote-author">Quote Author</label><br>
+						<input type="text" id="quote-author" name="quoteAuthor" value="Kashif Naseem Dilkusha" placeholder="Enter the quote author" required>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Online Profiles</legend>
+					<div id="links-container">
+						<p>
+							<label for="link-name-1">Link 1 Name</label><br>
+							<input type="text" id="link-name-1" name="linkName1" value="CLT Web" placeholder="Enter link name" required>
+						</p>
+						<p>
+							<label for="link-href-1">Link 1 URL</label><br>
+							<input type="url" id="link-href-1" name="linkHref1" value="https://webpages.charlotte.edu/kbathily" placeholder="Enter link URL" required>
+						</p>
+						<p>
+							<label for="link-name-2">Link 2 Name</label><br>
+							<input type="text" id="link-name-2" name="linkName2" value="GitHub.io" placeholder="Enter link name" required>
+						</p>
+						<p>
+							<label for="link-href-2">Link 2 URL</label><br>
+							<input type="url" id="link-href-2" name="linkHref2" value="https://kbathily.github.io" placeholder="Enter link URL" required>
+						</p>
+						<p>
+							<label for="link-name-3">Link 3 Name</label><br>
+							<input type="text" id="link-name-3" name="linkName3" value="GitHub" placeholder="Enter link name" required>
+						</p>
+						<p>
+							<label for="link-href-3">Link 3 URL</label><br>
+							<input type="url" id="link-href-3" name="linkHref3" value="https://github.com/kbathily" placeholder="Enter link URL" required>
+						</p>
+						<p>
+							<label for="link-name-4">Link 4 Name</label><br>
+							<input type="text" id="link-name-4" name="linkName4" value="freeCodeCamp" placeholder="Enter link name" required>
+						</p>
+						<p>
+							<label for="link-href-4">Link 4 URL</label><br>
+							<input type="url" id="link-href-4" name="linkHref4" value="https://www.freecodecamp.org/bathily" placeholder="Enter link URL" required>
+						</p>
+						<p>
+							<label for="link-name-5">Link 5 Name</label><br>
+							<input type="text" id="link-name-5" name="linkName5" value="freeCodeCamp Certification" placeholder="Enter link name" required>
+						</p>
+						<p>
+							<label for="link-href-5">Link 5 URL</label><br>
+							<input type="url" id="link-href-5" name="linkHref5" value="https://www.freecodecamp.org/certification/bathily/responsive-web-design-v9" placeholder="Enter link URL" required>
+						</p>
+						<p>
+							<label for="link-name-6">Link 6 Name</label><br>
+							<input type="text" id="link-name-6" name="linkName6" value="LinkedIn" placeholder="Enter link name" required>
+						</p>
+						<p>
+							<label for="link-href-6">Link 6 URL</label><br>
+							<input type="url" id="link-href-6" name="linkHref6" value="https://www.linkedin.com/in/bathily-bathily-a34b893a7/" placeholder="Enter link URL" required>
+						</p>
+					</div>
+				</fieldset>
+
+				<p>
+					<button type="submit">Submit</button>
+					<button type="reset">Reset</button>
+					<button type="button" id="clear-form">Clear</button>
+					<button type="button" id="generate-json">Generate JSON</button>
+					<button type="button" id="generate-html">Generate HTML</button>
+				</p>
+			</form>
+		</div>
+		<div id="output-view" hidden></div>
+	</main>
+	<div data-include="components/footer.html"></div>
+	<script src="Scripts/htmlinclude.js"></script>
+	<script src="Scripts/introduction.js"></script>
+	<script src="Scripts/generate_json.js"></script>
+	<script src="Scripts/generate_html.js"></script>
+</body>
+</html>
