@@ -76,7 +76,7 @@ export default function SiteLayout() {
                     <span aria-hidden="true"> | </span>
                     <a href="https://kbathily.github.io" target="_blank" rel="noopener noreferrer">GitHub.io</a>
                     <span aria-hidden="true"> | </span>
-                    <a href="https://itis3135-react.vercel.app" target="_blank" rel="noopener noreferrer">ITIS3135@Vercel</a>
+                    <a href="https://itis3135-react-swart-theta.vercel.app/" target="_blank" rel="noopener noreferrer">ITIS3135@Vercel</a>
                     <span aria-hidden="true"> | </span>
                     <a href="https://www.linkedin.com/in/bathily-bathily-a34b893a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <span aria-hidden="true"> | </span>
