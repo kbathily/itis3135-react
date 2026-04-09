@@ -39,6 +39,10 @@ header {
   border-bottom: 4px solid var(--accent);
 }
 
+header h1 {
+  margin: 0;
+}
+
 .primary-nav,
 .secondary-nav {
   margin-top: 0.5rem;
@@ -48,6 +52,10 @@ header {
 .secondary-nav a {
   display: inline-block;
   margin: 0.2rem 0;
+}
+
+.primary-nav {
+  line-height: 1.8;
 }
 
 .secondary-nav {

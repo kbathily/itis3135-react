@@ -1,10 +1,13 @@
 .primary-nav .active,
 .secondary-nav .active {
+  color: var(--link-hover);
   text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 .nav-separator {
-  margin: 0 0.25rem;
+  margin: 0 0.35rem;
+  color: var(--text);
 }
 
 main > .legacy-loading,

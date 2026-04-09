@@ -13,7 +13,11 @@ const primaryLinks = [
     { to: "/highlight", label: "Highlight" },
     { to: "/website_evaluations", label: "Website Evaluations" },
     { to: "/instructions", label: "Instructions" },
-    { to: "/intro_form", label: "Intro Form" }
+    { to: "/intro_form", label: "Intro Form" },
+    { href: "/itis3135-projects/project_overview.html", label: "Project Overview" },
+    { href: "/bathilydesigns.net/index.html", label: "Client Site" },
+    { to: "/hobby", label: "Hobby" },
+    { href: "/stuff/This%20is%20%F0%9F%91%8DGriGrI.htm", label: "CRAP Page" }
 ];
 
 function LinkGroup({ children }) {
@@ -35,33 +39,25 @@ export default function SiteLayout() {
     return (
         <>
             <header>
-                <h1>Bathily&apos;s Brave Kudu ~ ITIS 3135</h1>
+                <h1>Bathily&apos;s Brave Kudu</h1>
                 <nav className="primary-nav" aria-label="Primary navigation">
                     <LinkGroup>
                         {primaryLinks.map((link) => (
-                            <NavLink
-                                key={link.to}
-                                to={link.to}
-                                end={link.end}
-                                className={({ isActive }) => (isActive ? "active" : "")}
-                            >
-                                {link.label}
-                            </NavLink>
+                            link.to ? (
+                                <NavLink
+                                    key={link.to}
+                                    to={link.to}
+                                    end={link.end}
+                                    className={({ isActive }) => (isActive ? "active" : "")}
+                                >
+                                    {link.label}
+                                </NavLink>
+                            ) : (
+                                <a key={link.href} href={link.href}>
+                                    {link.label}
+                                </a>
+                            )
                         ))}
-                    </LinkGroup>
-                </nav>
-                <nav className="secondary-nav" aria-label="Additional links">
-                    <LinkGroup>
-                        {[
-                            <NavLink key="crap" to="/website_evaluations">CRAP Page</NavLink>,
-                            <a key="client" href="/bathilydesigns.net/index.html" target="_blank" rel="noopener noreferrer">
-                                Client Site
-                            </a>,
-                            <NavLink key="hobby" to="/hobby">Hobby</NavLink>,
-                            <a key="crappy" href="/stuff/This%20is%20%F0%9F%91%8DGriGrI.htm" target="_blank" rel="noopener noreferrer">
-                                Crappy Page
-                            </a>
-                        ]}
                     </LinkGroup>
                 </nav>
             </header>
