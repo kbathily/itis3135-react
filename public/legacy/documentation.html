@@ -11,6 +11,39 @@
     <div data-include="components/header.html"></div>
     <main>
         <h2>Technical Documentation Page</h2>
+        <p>
+            This page summarizes how the React version of the ITIS 3135 site reuses legacy HTML content while keeping
+            navigation consistent through React Router.
+        </p>
+
+        <section class="feature-card">
+            <h3>Architecture Summary</h3>
+            <ul>
+                <li>React Router controls page-level navigation</li>
+                <li>A shared site layout provides the course header and footer</li>
+                <li>Legacy HTML files are fetched from the public folder</li>
+                <li>Only each page's main content is injected into the React app</li>
+            </ul>
+        </section>
+
+        <section class="feature-card">
+            <h3>Rendering Flow</h3>
+            <ol>
+                <li>The route loads a matching legacy HTML file.</li>
+                <li>The page title and main content are extracted.</li>
+                <li>Legacy links are rewritten when they point to React routes.</li>
+                <li>The cleaned markup is rendered inside the shared layout.</li>
+            </ol>
+        </section>
+
+        <section id="output-view">
+            <h3>Implementation Notes</h3>
+            <pre><code>Route -&gt; LegacyPage -&gt; fetch HTML -&gt; parse &lt;main&gt; -&gt; rewrite internal links -&gt; render content</code></pre>
+            <p>
+                This approach keeps the original class assignments usable while gradually moving the site toward a
+                component-based React structure.
+            </p>
+        </section>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="Scripts/htmlinclude.js"></script>
