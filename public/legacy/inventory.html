@@ -1,112 +1,177 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/default.css">
-    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Book Inventory App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+<title>Book Inventory</title>
+
+<style>
+/* ---------- Table Layout ---------- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* ---------- Row Backgrounds using Attribute Selectors ---------- */
+tr[class="read"] {
+  background-image: linear-gradient(to right, #d4edda, #f0fff4);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, #fff3cd, #fffdf0);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, #d1ecf1, #f0fbff);
+}
+
+/* ---------- Span Display ---------- */
+span {
+  display: inline-block;
+}
+
+/* ---------- Status Styling ---------- */
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid #e0a800;
+  background-image: linear-gradient(to right, #ffeeba, #fff8dc);
+  padding: 3px 8px;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid #28a745;
+  background-image: linear-gradient(to right, #c3e6cb, #eaffea);
+  padding: 3px 8px;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid #17a2b8;
+  background-image: linear-gradient(to right, #bee5eb, #e6faff);
+  padding: 3px 8px;
+}
+
+/* ---------- Status + Rate Size ---------- */
+span[class="status"],
+span[class^="rate"] {
+  height: 20px;
+  width: auto;
+}
+
+/* ---------- Stars (Rate System) ---------- */
+span[class^="rate"] > span {
+  border-radius: 3px;
+  margin: 2px;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+}
+
+/* ---------- Rating Fill ---------- */
+/* one → first descendant only */
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+/* two → first TWO descendants */
+span[class~="two"] > span:nth-child(1),
+span[class~="two"] > span:nth-child(2) {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+/* three → ALL three descendants */
+span[class~="three"] > span {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>K Bathily's Brave Kudu ~ ITIS 3135</h1>
-        <nav aria-label="Primary course navigation">
-            <a href="index.html">Home</a> |
-            <a href="contract.html">Contract</a> |
-            <a href="survey.html">Survey</a> |
-            <a href="cards.html">Cards</a> |
-            <a href="inventory.html">Inventory</a> |
-            <a href="documentation.html">Documentation</a> |
-            <a href="product.html">Product</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="highlight.html">Highlight</a> |
-            <a href="website_evaluations.html">Website Evaluations</a> |
-            <a href="instructions.html">Instructions</a> |
-            <a href="intro_form.html">Intro Form</a>
-        </nav>
-        <nav aria-label="Additional links">
-            <a href="stuff/This%20is%20%F0%9F%91%8DGriGrI.htm">Crappy Page</a> |
-            <a href="hobby/index.html">Hobby</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Book Inventory App</h2>
-        <p>
-            This page presents a simple inventory concept for tracking books, quantities, and shelf locations.
-            It follows the same clean ITIS 3135 layout used across the rest of the site.
-        </p>
+    <div data-include="components/header.html"></div>
 
-        <section class="landing-callout">
-            <h3>Inventory Snapshot</h3>
-            <p>
-                The sample catalog below shows how a lightweight inventory interface can organize titles,
-                monitor stock, and flag items that need to be reordered.
-            </p>
-        </section>
+<h1>Book Inventory</h1>
 
-        <table>
-            <caption>Sample book inventory records</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Shelf</th>
-                    <th scope="col">Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>HTML and CSS Essentials</td>
-                    <td>Web Design</td>
-                    <td>12</td>
-                    <td>A-03</td>
-                    <td>In Stock</td>
-                </tr>
-                <tr>
-                    <td>JavaScript Patterns</td>
-                    <td>Programming</td>
-                    <td>4</td>
-                    <td>B-11</td>
-                    <td>Low Stock</td>
-                </tr>
-                <tr>
-                    <td>Responsive Interfaces</td>
-                    <td>UX</td>
-                    <td>9</td>
-                    <td>C-02</td>
-                    <td>In Stock</td>
-                </tr>
-                <tr>
-                    <td>Database Foundations</td>
-                    <td>Data</td>
-                    <td>2</td>
-                    <td>D-08</td>
-                    <td>Reorder Soon</td>
-                </tr>
-            </tbody>
-        </table>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Rate</th>
+    </tr>
+  </thead>
 
-        <section class="feature-card">
-            <h3>Planned Features</h3>
-            <ul>
-                <li>Add and remove books from inventory</li>
-                <li>Filter titles by category or availability</li>
-                <li>Highlight low-stock items automatically</li>
-                <li>Generate a quick restock summary</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>
-            <a href="https://github.com/kbathily" target="_blank" rel="noopener noreferrer">GitHub</a> |
-            <a href="https://webpages.charlotte.edu/kbathily" target="_blank" rel="noopener noreferrer">CLT Web</a> |
-            <a href="https://kbathily.github.io" target="_blank" rel="noopener noreferrer">GitHub.io</a> |
-            <a href="https://www.freecodecamp.org/bathily" target="_blank" rel="noopener noreferrer">freeCodeCamp</a> |
-            <a href="https://www.freecodecamp.org/certification/bathily/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">freeCodeCamp Certification</a> |
-            <a href="https://www.linkedin.com/in/bathily-bathily-a34b893a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
-        <p>Page built by <a href="../bathilydesigns.net/index.html">Bathily Designs</a> &copy; 2026</p>
-    </footer>
+  <tbody>
+    <tr class="read">
+      <td>The Great Gatsby</td>
+      <td>F. Scott Fitzgerald</td>
+      <td>Classic</td>
+      <td><span class="status">Read</span></td>
+      <td>
+        <span class="rate three">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="to-read">
+      <td>Atomic Habits</td>
+      <td>James Clear</td>
+      <td>Self-help</td>
+      <td><span class="status">To Read</span></td>
+      <td>
+        <span class="rate">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="in-progress">
+      <td>Clean Code</td>
+      <td>Robert C. Martin</td>
+      <td>Programming</td>
+      <td><span class="status">In Progress</span></td>
+      <td>
+        <span class="rate">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="read">
+      <td>1984</td>
+      <td>George Orwell</td>
+      <td>Dystopian</td>
+      <td><span class="status">Read</span></td>
+      <td>
+        <span class="rate two">
+          <span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    <div data-include="components/footer.html"></div>
+    <script src="Scripts/htmlinclude.js"></script>
+
 </body>
 </html>

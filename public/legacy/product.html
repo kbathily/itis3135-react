@@ -1,80 +1,86 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/default.css">
-    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Product Landing Page</title>
+    <title>SmartFit Tracker</title>
+  <link rel="stylesheet" href="styles/product.css" />
 </head>
+
 <body>
-    <header>
-        <h1>K Bathily's Brave Kudu ~ ITIS 3135</h1>
-        <nav aria-label="Primary course navigation">
-            <a href="index.html">Home</a> |
-            <a href="contract.html">Contract</a> |
-            <a href="survey.html">Survey</a> |
-            <a href="cards.html">Cards</a> |
-            <a href="inventory.html">Inventory</a> |
-            <a href="documentation.html">Documentation</a> |
-            <a href="product.html">Product</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="highlight.html">Highlight</a> |
-            <a href="website_evaluations.html">Website Evaluations</a> |
-            <a href="instructions.html">Instructions</a> |
-            <a href="intro_form.html">Intro Form</a>
-        </nav>
-        <nav aria-label="Additional links">
-            <a href="stuff/This%20is%20%F0%9F%91%8DGriGrI.htm">Crappy Page</a> |
-            <a href="hobby/index.html">Hobby</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Product Landing Page</h2>
-        <p>
-            This mock landing page showcases a featured product in the same straightforward style used by the
-            rest of the ITIS 3135 site.
-        </p>
+    <div data-include="components/header.html"></div>
+  <!-- Header -->
+  <header id="header">
+    <img
+      id="header-img"
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+      alt="SmartFit Logo"
+    >
 
-        <section class="landing-callout">
-            <h3>Featured Product: StudySprint Planner</h3>
-            <p>
-                StudySprint Planner is a lightweight digital planner designed to help students map weekly goals,
-                block distraction time, and keep assignments visible in one place.
-            </p>
-        </section>
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#video-section">Demo</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </nav>
+  </header>
 
-        <section class="feature-card">
-            <h3>Why It Stands Out</h3>
-            <ul>
-                <li>Simple weekly dashboard for courses and deadlines</li>
-                <li>Quick task entry with priority markers</li>
-                <li>Clear progress summaries for each class</li>
-                <li>Mobile-friendly layout for checking tasks between classes</li>
-            </ul>
-        </section>
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Powerful Fitness Tracking</h2>
+    <p>Track your health, monitor workouts, and stay motivated with SmartFit Tracker.</p>
+  </section>
 
-        <section class="feature-card">
-            <h3>Ideal Users</h3>
-            <p>
-                This concept is aimed at college students who want a focused planning tool without the clutter of
-                a full project-management platform.
-            </p>
-            <p>
-                It is especially useful for students balancing multiple assignments, lab work, and weekly study goals.
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>
-            <a href="https://github.com/kbathily" target="_blank" rel="noopener noreferrer">GitHub</a> |
-            <a href="https://webpages.charlotte.edu/kbathily" target="_blank" rel="noopener noreferrer">CLT Web</a> |
-            <a href="https://kbathily.github.io" target="_blank" rel="noopener noreferrer">GitHub.io</a> |
-            <a href="https://www.freecodecamp.org/bathily" target="_blank" rel="noopener noreferrer">freeCodeCamp</a> |
-            <a href="https://www.freecodecamp.org/certification/bathily/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">freeCodeCamp Certification</a> |
-            <a href="https://www.linkedin.com/in/bathily-bathily-a34b893a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
-        <p>Page built by <a href="../bathilydesigns.net/index.html">Bathily Designs</a> &copy; 2026</p>
-    </footer>
-</body>
-</html>
+  <!-- Video Section -->
+  <section id="video-section">
+    <h2>Watch SmartFit in Action</h2>
+    <iframe
+      id="video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/UB1O30fR-EE"
+      title="SmartFit Product Demo"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <h2>Simple Pricing</h2>
+    <div class="pricing-container">
+      <div class="plan">
+        <h3>Basic</h3>
+        <p>$9/month</p>
+      </div>
+
+      <div class="plan">
+        <h3>Pro</h3>
+        <p>$19/month</p>
+      </div>
+
+      <div class="plan">
+        <h3>Elite</h3>
+        <p>$29/month</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email Form -->
+  <section id="signup">
+    <h2>Get Started Today</h2>
+    <form id="form" action="https://www.freecodecamp.org/email-submit">
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      >
+      <input id="submit" type="submit" value="Subscribe">
+    </form>
+  </section>
+    <div data-include="components/footer.html"></div>
+    <script src="Scripts/htmlinclude.js"></script>
+
+  </body>
+  </html>
