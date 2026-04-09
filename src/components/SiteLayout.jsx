@@ -14,7 +14,6 @@ const primaryLinks = [
     { to: "/website_evaluations", label: "Website Evaluations" },
     { to: "/instructions", label: "Instructions" },
     { to: "/intro_form", label: "Intro Form" },
-    { href: "/itis3135-projects/project_overview.html", label: "Project Overview" },
     { href: "/bathilydesigns.net/index.html", label: "Client Site" },
     { to: "/hobby", label: "Hobby" },
     { href: "/stuff/This%20is%20%F0%9F%91%8DGriGrI.htm", label: "CRAP Page" }
