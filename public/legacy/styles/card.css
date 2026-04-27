@@ -1,0 +1,2 @@
+/* Forward to the shared root stylesheet */
+@import url('/styles/card.css');

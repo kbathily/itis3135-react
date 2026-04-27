@@ -10,6 +10,7 @@ const primaryLinks = [
     { to: "/documentation", label: "Documentation" },
     { to: "/product", label: "Product" },
     { to: "/gallery", label: "Gallery" },
+    { to: "/slideshow", label: "Slideshow" },
     { to: "/highlight", label: "Highlight" },
     { to: "/website_evaluations", label: "Website Evaluations" },
     { to: "/instructions", label: "Instructions" },

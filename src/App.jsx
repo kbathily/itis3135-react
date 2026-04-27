@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import LegacyPage from "./components/LegacyPage.jsx";
 import SiteLayout from "./components/SiteLayout.jsx";
+import SlideshowPage from "./pages/SlideshowPage.jsx";
 import "./styles/default.css";
 import "./styles/card.css";
 import "./styles/app.css";
@@ -17,6 +18,7 @@ function App() {
                 <Route path="documentation" element={<LegacyPage sourcePath="/legacy/documentation.html" />} />
                 <Route path="product" element={<LegacyPage sourcePath="/legacy/product.html" />} />
                 <Route path="gallery" element={<LegacyPage sourcePath="/legacy/gallery.html" />} />
+                <Route path="slideshow" element={<SlideshowPage />} />
                 <Route path="highlight" element={<LegacyPage sourcePath="/legacy/highlight.html" />} />
                 <Route path="website_evaluations" element={<LegacyPage sourcePath="/legacy/website_evaluations.html" />} />
                 <Route path="instructions" element={<LegacyPage sourcePath="/legacy/instructions.html" />} />
